@@ -1,0 +1,47 @@
+{
+  "recommendations": [
+    // أدوات التطوير الأساسية
+    "esbenp.prettier-vscode",
+    "dbaeumer.vscode-eslint",
+    
+    // TypeScript و React
+    "ms-vscode.vscode-typescript-next",
+    "bradlc.vscode-tailwindcss",
+    "formulahendry.auto-rename-tag",
+    "ms-vscode.vscode-json",
+    
+    // Git والتعاون
+    "eamodio.gitlens",
+    "github.vscode-pull-request-github",
+    
+    // إضافات مفيدة للتطوير
+    "christian-kohler.path-intellisense",
+    "christian-kohler.npm-intellisense",
+    "ms-vscode.vscode-json",
+    "redhat.vscode-yaml",
+    
+    // تحسين التجربة البصرية
+    "pkief.material-icon-theme",
+    "github.github-vscode-theme",
+    "ms-vscode.theme-tomorrowkit",
+    
+    // أدوات إضافية للـ React
+    "dsznajder.es7-react-js-snippets",
+    "burkeholland.simple-react-snippets",
+    
+    // أدوات الاختبار والتطوير
+    "humao.rest-client",
+    "ms-vscode.vscode-json",
+    
+    // تحسينات أخرى
+    "streetsidesoftware.code-spell-checker",
+    "usernamehw.errorlens",
+    "wayou.vscode-todo-highlight"
+  ],
+  "unwantedRecommendations": [
+    // إضافات قد تتضارب مع التكوين
+    "ms-vscode.vscode-typescript",
+    "hookyqr.beautify",
+    "esbenp.prettier-vscode-standard"
+  ]
+}
