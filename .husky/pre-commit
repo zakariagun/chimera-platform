@@ -1,0 +1,18 @@
+#!/usr/bin/env sh
+. "$(dirname -- "$0")/_/husky.sh"
+
+echo "🔍 تشغيل فحص ما قبل الـ commit..."
+
+# فحص TypeScript
+echo "📋 فحص TypeScript..."
+npm run typecheck
+
+# فحص ESLint
+echo "🔧 فحص ESLint..."
+npm run lint
+
+# تشغيل lint-staged للملفات المعدلة فقط
+echo "✨ تنسيق الملفات المعدلة..."
+npx lint-staged
+
+echo "✅ جميع الفحوصات مكتملة بنجاح!"
