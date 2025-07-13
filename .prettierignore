@@ -1,0 +1,41 @@
+# تجاهل المجلدات المبنية
+dist/
+build/
+coverage/
+node_modules/
+
+# تجاهل ملفات التكوين المعقدة
+*.config.js
+*.config.ts
+vite.config.*
+tailwind.config.*
+
+# تجاهل ملفات النظام
+.DS_Store
+.env*
+.vscode/
+.idea/
+
+# تجاهل ملفات Git
+.git/
+.gitignore
+
+# تجاهل ملفات Package Managers
+package-lock.json
+yarn.lock
+pnpm-lock.yaml
+
+# تجاهل الملفات المولدة
+*.d.ts
+*.generated.*
+
+# تجاهل ملفات البيانات
+*.json
+*.md
+public/
+
+# تجاهل مجلدات مؤقتة
+tmp/
+temp/
+.cache/
+.vite/
