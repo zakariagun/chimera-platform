@@ -1,0 +1,37 @@
+# تجاهل المجلدات المبنية
+dist/
+build/
+coverage/
+node_modules/
+
+# تجاهل ملفات التكوين
+*.config.js
+*.config.ts
+!eslint.config.js
+
+# تجاهل الملفات المولدة
+*.d.ts
+vite-env.d.ts
+
+# تجاهل مجلدات مؤقتة
+.vite/
+.cache/
+tmp/
+temp/
+
+# تجاهل ملفات النظام
+.DS_Store
+.env*
+
+# تجاهل ملفات Package Managers
+package-lock.json
+yarn.lock
+pnpm-lock.yaml
+
+# تجاهل public assets
+public/
+
+# تجاهل documentation
+docs/
+*.md
+!README.md
