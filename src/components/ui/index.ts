@@ -18,24 +18,50 @@ export {
   type TextAreaProps
 } from './Input';
 
-// ===== المكونات المطلوبة - REQUIRED COMPONENTS =====
-// هذه المكونات يجب على الوكيل التالي تطويرها
-// These components need to be developed by the next agent
+// مكون البطاقة - Card Component ✅
+export { 
+  default as Card,
+  CardHeader,
+  CardTitle,
+  CardDescription,
+  CardContent,
+  CardFooter,
+  type CardProps,
+  type CardHeaderProps,
+  type CardTitleProps,
+  type CardDescriptionProps,
+  type CardContentProps,
+  type CardFooterProps
+} from './Card';
 
-// مكون البطاقة - Card Component (4 كريديت) 🔄
-// export { default as Card, type CardProps } from './Card';
+// مكون النافذة المنبثقة - Modal Component ✅  
+export { 
+  default as Modal,
+  ModalHeader,
+  ModalTitle,
+  ModalDescription,
+  ModalContent,
+  ModalFooter,
+  type ModalProps,
+  type ModalHeaderProps,
+  type ModalTitleProps,
+  type ModalDescriptionProps,
+  type ModalContentProps,
+  type ModalFooterProps
+} from './Modal';
 
-// مكون النافذة المنبثقة - Modal Component (4 كريديت) 🔄  
-// export { default as Modal, type ModalProps } from './Modal';
+// مكونات التغذية الراجعة - Feedback Components ✅
+export { 
+  LoadingSpinner, 
+  Toast, 
+  ProgressBar, 
+  Alert,
+  type LoadingSpinnerProps,
+  type ToastProps,
+  type ProgressBarProps,
+  type AlertProps
+} from './Feedback';
 
-// مكونات التغذية الراجعة - Feedback Components (4 كريديت) 🔄
-// export { 
-//   LoadingSpinner, 
-//   Toast, 
-//   ProgressBar, 
-//   Alert,
-//   type LoadingSpinnerProps,
-//   type ToastProps,
-//   type ProgressBarProps,
-//   type AlertProps
-// } from './Feedback';
+// ===== جميع المكونات مكتملة - ALL COMPONENTS COMPLETED =====
+// نقطة التحكم 2: مكتملة 100% (25/25 كريديت) ✅
+// Checkpoint 2: 100% Complete (25/25 credits) ✅
