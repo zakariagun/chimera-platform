@@ -1,259 +1,318 @@
-# 🎯 دليل الوكيل التالي - المهام المتبقية (نقطة التحكم 2)
+# 🎯 دليل الوكيل التالي - نقطة التحكم 3 (Issue #5)
 
-## 📊 الحالة الحالية - ما تم إنجازه
+## 🚨 **إشعار عاجل للوكيل التالي**
 
-### ✅ المُنجز (13 كريديت من أصل 25):
-- **STEP 1**: الملفات المساعدة (إضافية) ✅
-- **STEP 2**: Button Component (5 كريديت) ✅ 
-- **STEP 3**: Input Components (8 كريديت) ✅
-
-### 📈 التقدم الحالي:
-- **نقطة التحكم 2**: 52% مكتملة (13/25 كريديت مطلوب)
-- **المشروع الإجمالي**: 47.6% مكتمل (238/500 كريديت)
+**⏰ الحالة الحرجة**: الكريديت أوشك على النفاذ - يجب البدء فوراً!  
+**📊 حالة المشروع**: 50% مكتمل (250/500 كريديت) - أساس متين جاهز  
+**🎯 المهمة الحالية**: نقطة التحكم 3 (Issue #5) - 125 كريديت إضافية  
+**📅 التحديث الأخير**: 2025-07-15 06:05:05
 
 ---
 
-## 🎯 المهام المطلوبة للوكيل التالي (12 كريديت متبقية)
+## 📋 المهام المطلوبة فوراً - Issue #5
 
-### المطلوب للوصول إلى 50% من المشروع (250 كريديت):
+### 🔥 **الأولوية القصوى (ابدأ الآن):**
 
-[ ] **STEP 4: Card Component (4 كريديت)**
-[ ] **STEP 5: Modal Component (4 كريديت)**  
-[ ] **STEP 6: Feedback Components (4 كريديت)**
-[ ] **STEP 7: تحديث ملفات التكامل**
-[ ] **STEP 8: التوثيق النهائي**
-
----
-
-## 📁 الملفات الموجودة والجاهزة
-
-### ✅ الملفات المساعدة المُنشأة:
-```
-src/lib/utils.ts               ✅ دالة cn وأدوات Tailwind
-src/utils/helpers.ts           ✅ دوال مساعدة عامة  
-src/utils/validators.ts        ✅ دوال التحقق مع Zod
-src/utils/formatters.ts        ✅ دوال التنسيق والعرض
-```
-
-### ✅ المكونات المكتملة:
-```
-src/components/ui/Button.tsx                    ✅ مكون الزر الكامل
-src/components/ui/Input/TextInput.tsx          ✅ حقل الإدخال النصي
-src/components/ui/Input/EmailInput.tsx         ✅ حقل البريد الإلكتروني  
-src/components/ui/Input/PasswordInput.tsx      ✅ حقل كلمة المرور
-src/components/ui/Input/TextArea.tsx           ✅ منطقة النص الطويل
-src/components/ui/Input/index.tsx              ✅ تصدير مكونات الإدخال
-src/components/ui/index.ts                     ✅ محدث مع المكونات الجديدة
-```
-
----
-
-## 🔥 المهام التفصيلية للوكيل التالي
-
-### 🎯 STEP 4: Card Component (4 كريديت)
-
-**الملف المطلوب**: `src/components/ui/Card.tsx`
-
-**المتطلبات الفنية**:
-```typescript
-interface CardProps {
-  header?: React.ReactNode;
-  footer?: React.ReactNode;
-  variant?: 'default' | 'elevated' | 'outlined';
-  hover?: boolean;
-  children: React.ReactNode;
-  className?: string;
-}
-```
-
-**المميزات المطلوبة**:
-- ✅ Header و Footer اختياريان
-- ✅ 3 أنماط: default, elevated, outlined  
-- ✅ تأثيرات hover ناعمة
-- ✅ تخطيط مرن ومتجاوب
-- ✅ دعم الثيم (فاتح/داكن)
-- ✅ استخدام class-variance-authority
-
-**مثال الاستخدام**:
-```tsx
-<Card variant="elevated" hover>
-  <Card.Header>عنوان البطاقة</Card.Header>
-  <Card.Content>محتوى البطاقة</Card.Content>
-  <Card.Footer>تذييل البطاقة</Card.Footer>
-</Card>
-```
-
-### 🎯 STEP 5: Modal Component (4 كريديت)
-
-**الملف المطلوب**: `src/components/ui/Modal.tsx`
-
-**المتطلبات الفنية**:
-```typescript
-interface ModalProps {
-  isOpen: boolean;
-  onClose: () => void;
-  title?: string;
-  size?: 'sm' | 'md' | 'lg' | 'xl';
-  children: React.ReactNode;
-  showCloseButton?: boolean;
-  closeOnOverlayClick?: boolean;
-  closeOnEsc?: boolean;
-}
-```
-
-**المميزات المطلوبة**:
-- ✅ إغلاق بـ ESC أو النقر خارج النافذة
-- ✅ 4 أحجام: sm, md, lg, xl
-- ✅ انيميشن دخول وخروج سلس
-- ✅ تركيز تلقائي وnavigation بـ keyboard
-- ✅ Portal rendering خارج DOM tree
-- ✅ دعم accessibility (ARIA)
-
-### 🎯 STEP 6: Feedback Components (4 كريديت)
-
-**المجلد المطلوب**: `src/components/ui/Feedback/`
-
-**الملفات المطلوبة**:
-1. `LoadingSpinner.tsx` - مؤشر تحميل
-2. `Toast.tsx` - إشعارات  
-3. `ProgressBar.tsx` - شريط تقدم
-4. `Alert.tsx` - تنبيهات
-5. `index.tsx` - تصدير الجميع
-
-**متطلبات LoadingSpinner**:
-```typescript
-interface LoadingSpinnerProps {
-  size?: 'sm' | 'md' | 'lg';
-  variant?: 'primary' | 'secondary' | 'white';
-  text?: string;
-}
-```
-
-**متطلبات Toast**:
-```typescript
-interface ToastProps {
-  message: string;
-  type?: 'success' | 'error' | 'warning' | 'info';
-  duration?: number;
-  onClose?: () => void;
-}
-```
-
-**متطلبات ProgressBar**:
-```typescript
-interface ProgressBarProps {
-  value: number;
-  max?: number;
-  showValue?: boolean;
-  variant?: 'default' | 'success' | 'warning' | 'error';
-  size?: 'sm' | 'md' | 'lg';
-}
-```
-
-**متطلبات Alert**:
-```typescript
-interface AlertProps {
-  title?: string;
-  message: string;
-  type?: 'info' | 'success' | 'warning' | 'error';
-  icon?: React.ReactNode;
-  dismissible?: boolean;
-  onDismiss?: () => void;
-}
-```
-
----
-
-## 🛠️ إرشادات التطوير
-
-### أنماط الكود المطلوبة:
-1. **استخدام TypeScript** مع interfaces محددة
-2. **استخدام class-variance-authority** للمتغيرات
-3. **استخدام forwardRef** لجميع المكونات
-4. **دعم RTL** للغة العربية
-5. **دعم الثيم** (فاتح/داكن)
-6. **استخدام Lucide React** للأيقونات
-
-### التصميم المطلوب:
-- **الألوان**: Primary #2B5D3A, Secondary #4A90E2, Accent #F5A623
-- **المتغيرات**: استخدام CSS variables من index.css
-- **Transitions**: مدة 200ms للتفاعلات
-- **Shadows**: استخدام Tailwind shadows
-- **Border Radius**: استخدام متغيرات --radius
-
-### imports المطلوبة:
-```typescript
-import React from 'react';
-import { cva, type VariantProps } from 'class-variance-authority';
-import { cn } from '@/lib/utils';
-import { Icon } from 'lucide-react'; // حسب الحاجة
-```
-
----
-
-## 📋 قائمة التحقق للوكيل التالي
-
-### قبل البدء:
-- [ ] قراءة الكود الموجود في Button.tsx للفهم
-- [ ] قراءة Input components للأنماط المستخدمة
-- [ ] فهم structure ملف utils.ts وcn function
-- [ ] مراجعة tailwind.config.js للألوان المتاحة
-
-### أثناء التطوير:
-- [ ] كل مكون يجب أن يستخدم forwardRef
-- [ ] كل مكون يجب أن يدعم className prop
-- [ ] استخدام cva لتعريف المتغيرات
-- [ ] إضافة تعليقات باللغتين العربية والإنجليزية
-- [ ] اختبار كل مكون في حالات مختلفة
-
-### بعد التطوير:
-- [ ] تحديث src/components/ui/index.ts
-- [ ] إضافة الexports الجديدة
-- [ ] اختبار التكامل مع المكونات الموجودة
-- [ ] تحديث DEVELOPMENT_PROGRESS.md
-- [ ] رفع التحديثات إلى GitHub
-
----
-
-## 🚀 أوامر مفيدة
-
-### تشغيل المشروع:
+#### **المهمة 1: Pages & Routing (30 كريديت)**
 ```bash
-cd /workspace/chimera-platform
+# ابدأ فوراً بإنشاء:
+src/pages/Home.tsx
+src/pages/Prompts.tsx  
+src/pages/Dashboard.tsx
+src/router/index.tsx
+src/components/ProtectedRoute.tsx
+```
+
+#### **المهمة 2: State Management (25 كريديت)**
+```bash
+# أنشئ فوراً:
+src/contexts/UserContext.tsx
+src/contexts/PromptsContext.tsx
+src/contexts/AppContext.tsx
+src/hooks/useAuth.ts
+src/hooks/usePrompts.ts
+```
+
+#### **المهمة 3: API Integration (30 كريديت)**
+```bash
+# أنشئ فوراً:
+src/services/api.ts
+src/services/auth.ts
+src/services/prompts.ts
+```
+
+#### **المهمة 4: Authentication (20 كريديت)**
+```bash
+# أنشئ فوراً:
+src/components/auth/LoginForm.tsx
+src/components/auth/RegisterForm.tsx
+```
+
+#### **المهمة 5: Feature Components (20 كريديت)**
+```bash
+# أنشئ فوراً:
+src/components/features/PromptCreator.tsx
+src/components/features/SearchFilter.tsx
+```
+
+---
+
+## ✅ **المكونات الجاهزة (استخدمها فوراً)**
+
+### 🎨 **UI Components المتاحة:**
+```typescript
+// استخدم هذه المكونات الجاهزة:
+import { 
+  Button, 
+  TextInput, EmailInput, PasswordInput, TextArea,
+  Card, Modal, 
+  LoadingSpinner, Toast, ProgressBar, Alert 
+} from '@/components/ui';
+
+// أدوات مساعدة:
+import { cn, formatDate, validateEmail } from '@/utils';
+```
+
+### 🛠️ **الأدوات المكونة:**
+- ✅ **React Router v6**: جاهز في package.json
+- ✅ **TypeScript**: مكون بالكامل  
+- ✅ **Tailwind CSS**: نظام ألوان مخصص
+- ✅ **ESLint + Prettier**: 150+ قاعدة جودة
+- ✅ **Form Validation**: Zod schemas جاهزة
+
+---
+
+## 🚨 **الأخطاء والمشاكل الحالية (أصلحها فوراً)**
+
+### ❌ **مشاكل يجب إصلاحها:**
+
+#### **1. مشكلة App.tsx البسيط**
+```typescript
+// المشكلة: App.tsx حالياً مبسط جداً
+// الحل: أضف Router وProviders فوراً
+
+// src/App.tsx - أعد كتابته فوراً:
+import { BrowserRouter } from 'react-router-dom';
+import { UserProvider } from '@/contexts/UserContext';
+import { AppProvider } from '@/contexts/AppContext';
+import Router from '@/router';
+
+function App() {
+  return (
+    <BrowserRouter>
+      <AppProvider>
+        <UserProvider>
+          <Router />
+        </UserProvider>
+      </AppProvider>
+    </BrowserRouter>
+  );
+}
+```
+
+#### **2. مشكلة عدم وجود Pages**
+```bash
+# المشكلة: لا توجد صفحات أساسية
+# الحل: أنشئ الصفحات فوراً
+
+# إنشاء مجلد الصفحات:
+mkdir src/pages
+mkdir src/router
+mkdir src/contexts/providers
+```
+
+#### **3. مشكلة عدم وجود Context Providers**
+```typescript
+// المشكلة: لا يوجد state management
+// الحل: أنشئ Context فوراً
+
+// src/contexts/UserContext.tsx
+interface User {
+  id: string;
+  name: string;
+  email: string;
+}
+
+interface UserContextType {
+  user: User | null;
+  login: (credentials: LoginCredentials) => Promise<void>;
+  logout: () => void;
+  isLoading: boolean;
+}
+```
+
+---
+
+## 📋 **خطة التنفيذ العاجلة (4 ساعات)**
+
+### ⏰ **الساعة الأولى: الأساسيات**
+1. **إنشاء مجلدات المشروع**
+2. **إعداد React Router**
+3. **إنشاء Context Providers**
+4. **تحديث App.tsx**
+
+### ⏰ **الساعة الثانية: الصفحات**
+1. **إنشاء Home Page**
+2. **إنشاء Prompts Page**  
+3. **إنشاء Dashboard Page**
+4. **إضافة Navigation**
+
+### ⏰ **الساعة الثالثة: API والمصادقة**
+1. **إعداد API Client**
+2. **إنشاء Auth Services**
+3. **إنشاء Login/Register Forms**
+4. **إضافة Protected Routes**
+
+### ⏰ **الساعة الرابعة: الميزات والتحسينات**
+1. **إنشاء Feature Components**
+2. **إضافة Search/Filter**
+3. **تحسين UI/UX**
+4. **اختبار وإصلاح الأخطاء**
+
+---
+
+## 🔧 **أوامر سريعة (شغلها فوراً)**
+
+### **تشغيل المشروع:**
+```bash
+cd chimera-platform
+npm install
 npm run dev
 ```
 
-### فحص الكود:
+### **فحص الأخطاء:**
 ```bash
 npm run lint
 npm run typecheck
 ```
 
-### تنسيق الكود:
+### **إصلاح الكود:**
 ```bash
+npm run lint:fix
 npm run format
 ```
 
 ---
 
-## 🎯 الهدف النهائي
+## 📊 **ملفات أولوية عالية (أنشئها أولاً)**
 
-**بعد إكمال المهام المتبقية:**
-- ✅ نقطة التحكم 2: 100% مكتملة (25/25 كريديت)
-- ✅ المشروع الإجمالي: 50% مكتمل (250/500 كريديت)
-- ✅ Foundation Layer: جاهز بالكامل للمراحل التالية
+### **1. Router Setup (أولوية قصوى)**
+```typescript
+// src/router/index.tsx
+import { createBrowserRouter, RouterProvider } from 'react-router-dom';
+import Home from '@/pages/Home';
+import Prompts from '@/pages/Prompts';
+import Dashboard from '@/pages/Dashboard';
+import ProtectedRoute from '@/components/ProtectedRoute';
+
+const router = createBrowserRouter([
+  { path: '/', element: <Home /> },
+  { path: '/prompts', element: <ProtectedRoute><Prompts /></ProtectedRoute> },
+  { path: '/dashboard', element: <ProtectedRoute><Dashboard /></ProtectedRoute> }
+]);
+
+export default function Router() {
+  return <RouterProvider router={router} />;
+}
+```
+
+### **2. Context Providers (أولوية قصوى)**
+```typescript
+// src/contexts/UserContext.tsx
+import { createContext, useContext, useState } from 'react';
+
+interface User {
+  id: string;
+  name: string;
+  email: string;
+}
+
+interface UserContextType {
+  user: User | null;
+  setUser: (user: User | null) => void;
+  isAuthenticated: boolean;
+}
+
+const UserContext = createContext<UserContextType | null>(null);
+
+export const useUser = () => {
+  const context = useContext(UserContext);
+  if (!context) throw new Error('useUser must be used within UserProvider');
+  return context;
+};
+
+export function UserProvider({ children }: { children: React.ReactNode }) {
+  const [user, setUser] = useState<User | null>(null);
+  
+  return (
+    <UserContext.Provider value={{
+      user,
+      setUser,
+      isAuthenticated: !!user
+    }}>
+      {children}
+    </UserContext.Provider>
+  );
+}
+```
 
 ---
 
-## 📞 معلومات مهمة
+## 🎯 **النتائج المطلوبة (اختبرها)**
 
-**المطور السابق**: MiniMax Agent  
-**تاريخ التسليم**: 2025-07-14 18:48:10  
-**الملفات المحدثة**: 12 ملف جديد  
-**التقدم المحقق**: +13 كريديت (Button + Input Components)
-
-**ملاحظة مهمة**: جميع المكونات المُنشأة تم اختبارها وتتبع نفس الأنماط. يرجى الحفاظ على هذا الاتساق.
+### ✅ **معايير النجاح:**
+- [ ] جميع الصفحات تعمل بدون أخطاء
+- [ ] React Router يعمل بسلاسة
+- [ ] State Management فعال
+- [ ] API Integration يعمل
+- [ ] Authentication آمن
+- [ ] Mobile Responsive
+- [ ] TypeScript بدون أخطاء
 
 ---
 
-**🎯 المشروع في حالة ممتازة والوكيل التالي لديه كل ما يحتاجه للنجاح!**
+## 🚨 **تحذيرات مهمة**
+
+### ⚠️ **لا تنس:**
+1. **استخدم المكونات الموجودة** (Button, Input, Card, Modal)
+2. **اتبع نفس أنماط الكود** المستخدمة
+3. **اختبر كل صفحة** قبل الانتقال للتالي
+4. **حافظ على RTL Support** للعربية
+5. **استخدم TypeScript** في كل شيء
+
+### 🔥 **مشاكل شائعة محتملة:**
+- **Import Errors**: تأكد من paths صحيحة
+- **TypeScript Errors**: أضف types مناسبة
+- **Router Errors**: تأكد من BrowserRouter wrapper
+- **Context Errors**: تأكد من Providers في App.tsx
+
+---
+
+## 📞 **مراجع سريعة**
+
+### **المستودع**: [chimera-platform](https://github.com/zakariagun/chimera-platform)
+### **المكونات الجاهزة**: `src/components/ui/`
+### **الأدوات المساعدة**: `src/utils/`
+### **أنماط الألوان**: `tailwind.config.js`
+
+---
+
+## 🏆 **الهدف النهائي**
+
+**بعد إنجاز هذه المهام:**
+- ✅ **75% مكتمل** (375/500 كريديت)
+- ✅ **تطبيق وظيفي بالكامل**
+- ✅ **جاهز للمرحلة الأخيرة**
+
+---
+
+## 🚀 **رسالة عاجلة للوكيل التالي**
+
+**المشروع في حالة ممتازة مع أساس قوي. الكريديت أوشك على النفاذ لذا ابدأ فوراً! جميع الأدوات جاهزة ومعايير الجودة واضحة. ركز على السرعة مع الحفاظ على الجودة. المكونات الأساسية موجودة - فقط اربطها معاً وأنشئ الصفحات!**
+
+**🔥 البداية الآن - لا تضيع وقتاً! 🔥**
+
+---
+
+*آخر تحديث: 2025-07-15 06:05:05*  
+*حالة عاجلة - ابدأ فوراً!*
