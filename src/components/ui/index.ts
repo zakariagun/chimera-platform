@@ -1,17 +1,41 @@
 // مكونات واجهة المستخدم الأساسية
 // Basic UI Components
 
-// مكونات الإدخال والعرض - Input & Display Components
-export { default as Button } from './button/Button';
-export { default as Input } from './input/Input';
-export { default as Card } from './card/Card';
-export { default as Modal } from './modal/Modal';
-export { default as Dropdown } from './dropdown/Dropdown';
+// ===== المكونات المكتملة - COMPLETED COMPONENTS =====
 
-// مكونات التنقل - Navigation Components
-export { default as Navigation } from './navigation/Navigation';
+// مكون الزر - Button Component ✅
+export { default as Button, type ButtonProps } from './Button';
 
-// مكونات التغذية الراجعة - Feedback Components
-export { default as LoadingSpinner } from './feedback/LoadingSpinner';
-export { default as Toast } from './feedback/Toast';
-export { default as ProgressBar } from './feedback/ProgressBar';
+// مكونات الإدخال - Input Components ✅
+export { 
+  TextInput, 
+  EmailInput, 
+  PasswordInput, 
+  TextArea,
+  type TextInputProps,
+  type EmailInputProps,
+  type PasswordInputProps,
+  type TextAreaProps
+} from './Input';
+
+// ===== المكونات المطلوبة - REQUIRED COMPONENTS =====
+// هذه المكونات يجب على الوكيل التالي تطويرها
+// These components need to be developed by the next agent
+
+// مكون البطاقة - Card Component (4 كريديت) 🔄
+// export { default as Card, type CardProps } from './Card';
+
+// مكون النافذة المنبثقة - Modal Component (4 كريديت) 🔄  
+// export { default as Modal, type ModalProps } from './Modal';
+
+// مكونات التغذية الراجعة - Feedback Components (4 كريديت) 🔄
+// export { 
+//   LoadingSpinner, 
+//   Toast, 
+//   ProgressBar, 
+//   Alert,
+//   type LoadingSpinnerProps,
+//   type ToastProps,
+//   type ProgressBarProps,
+//   type AlertProps
+// } from './Feedback';
